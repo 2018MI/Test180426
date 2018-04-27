@@ -1,1 +1,4 @@
-include ':app', ':mylib'
+include ':app', ':mylib', ':$1$senseshow', ':$1$senseshow'
+// add by chengpx
+include 'MPChartLib'
+// add by chengpx

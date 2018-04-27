@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">MyLib</string>
+
+    <string-array name="tableArr">
+        <item>11</item>
+    </string-array>
 </resources>
