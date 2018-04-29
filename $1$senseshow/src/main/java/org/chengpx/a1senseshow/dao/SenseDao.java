@@ -6,6 +6,7 @@ import org.chengpx.a1senseshow.domain.SenseBean;
 import org.chengpx.mylib.db.BaseDao;
 
 import java.sql.SQLException;
+import java.util.List;
 
 /**
  * create at 2018/4/27 14:49 by chengpx
@@ -29,4 +30,12 @@ public class SenseDao extends BaseDao<SenseBean> {
         return sSenseDao;
     }
 
+    public List<SenseBean> select(String senseName) {
+        try {
+            return mDao.queryForEq("SenseName", senseName);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 }

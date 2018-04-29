@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="自动报警: " />
+
+        <Switch
+            android:id="@+id/thresholdsetting_switch_isautocallpolice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textOff="关"
+            android:textOn="开" />
+
+    </LinearLayout>
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TableRow>
+
+            <TextView android:text="温度" />
+
+            <EditText
+                android:id="@+id/thresholdsetting_et_temperature"
+                android:width="200dp"
+                android:enabled="false"
+                android:singleLine="true" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="湿度" />
+
+            <EditText
+                android:id="@+id/thresholdsetting_et_humidity"
+                android:width="200dp"
+                android:enabled="false"
+                android:singleLine="true" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="光照" />
+
+            <EditText
+                android:id="@+id/thresholdsetting_et_LightIntensity"
+                android:width="200dp"
+                android:enabled="false"
+                android:singleLine="true" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="CO2" />
+
+            <EditText
+                android:id="@+id/thresholdsetting_et_co2"
+                android:width="200dp"
+                android:enabled="false"
+                android:singleLine="true" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="PM2.5" />
+
+            <EditText
+                android:id="@+id/thresholdsetting_et_pm25"
+                android:width="200dp"
+                android:enabled="false"
+                android:singleLine="true" />
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView android:text="道路状态" />
+
+            <EditText
+                android:id="@+id/thresholdsetting_et_RoadStatus"
+                android:width="200dp"
+                android:enabled="false"
+                android:singleLine="true" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/thresholdsetting_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="保存" />
+
+</LinearLayout>

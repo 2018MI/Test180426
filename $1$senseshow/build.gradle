@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "org.chengpx.a1senseshow"
-        minSdkVersion 15
+        minSdkVersion 14
         targetSdkVersion 15
         versionCode 1
         versionName "1.0"
@@ -36,4 +36,5 @@ dependencies {
     implementation files('libs/ormlite-android-5.1.jar')
     implementation files('libs/ormlite-core-5.1.jar')
     implementation project(':MPChartLib')
+    implementation project(':SlidingMenuLib')
 }

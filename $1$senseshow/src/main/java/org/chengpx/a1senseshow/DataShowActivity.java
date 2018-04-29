@@ -123,7 +123,7 @@ public class DataShowActivity extends Activity {
         @Override
         protected void onSuccess(Map map) {
             try {
-                addEntry(DataUtils.obj2int(map.get(mSenseName)), senseshow_linechart_data_inner);
+                addEntry(DataUtils.obj2int(map.get(mSenseName)), senseshow_linechart_data_inner, mSenseName);
             } catch (AppException e) {
                 e.printStackTrace();
             }
@@ -146,13 +146,13 @@ public class DataShowActivity extends Activity {
 
         @Override
         protected void onSuccess(RoadBean roadBean) {
-            addEntry(roadBean.getStatus(), senseshow_linechart_data_inner);
+            addEntry(roadBean.getStatus(), senseshow_linechart_data_inner, "RoadStatus");
         }
 
 
     }
 
-    private static void addEntry(int yVal, LineChart senseshow_linechart_data_inner) {
+    private static void addEntry(int yVal, LineChart senseshow_linechart_data_inner, String desc) {
         LineData lineData = senseshow_linechart_data_inner.getData();
         if (lineData == null) {
             lineData = new LineData();
@@ -160,7 +160,7 @@ public class DataShowActivity extends Activity {
             senseshow_linechart_data_inner.setData(lineData);
         }
         if (lineData.getDataSetCount() < 1) {
-            LineDataSet lineDataSet = new LineDataSet(new ArrayList<Entry>(), "my data");
+            LineDataSet lineDataSet = new LineDataSet(new ArrayList<Entry>(), desc);
             lineDataSet.setDrawValues(true);
             lineData.addDataSet(lineDataSet);
             // lineDataSet.setLineWidth(2.5f);

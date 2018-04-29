@@ -10,6 +10,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/$1$senseshow" />
             <option value="$PROJECT_DIR$/MPChartLib" />
+            <option value="$PROJECT_DIR$/SlidingMenuLib" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mylib" />
           </set>

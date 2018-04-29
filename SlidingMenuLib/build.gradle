@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        // add by chengpx
+        google()
+        jcenter()
+        // add by chengpx
+    }
+    dependencies {
+        // modify by chengpx
+        // classpath 'com.android.tools.build:gradle:0.4.+'
+        classpath 'com.android.tools.build:gradle:3.1.2'
+        // modify by chengpx
+    }
+}
+// modify by chengpx
+// apply plugin: 'android-library'
+apply plugin: 'com.android.library'
+// modify by chengpx
+
+dependencies {
+    // modify by chengpx
+    // compile 'com.android.support:support-v4:13.0.0'
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+    // modify by chengpx
+}
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    defaultConfig {
+        minSdkVersion 7
+        targetSdkVersion 15
+    }
+    sourceSets {
+        main {
+            java.srcDirs = ['src']
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+
+            manifest.srcFile 'AndroidManifest.xml'
+        }
+    }
+    productFlavors {
+    }
+}
